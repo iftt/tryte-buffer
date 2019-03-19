@@ -1,19 +1,14 @@
-# skeleton-module [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![Greenkeeper badge](https://badges.greenkeeper.io/IFTT/skeleton-module.svg)](https://greenkeeper.io/)
+# Tryte Buffer [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![Greenkeeper badge](https://badges.greenkeeper.io/IFTT/tryte-buffer.svg)](https://greenkeeper.io/)
 
-[travis-image]: https://travis-ci.org/IFTT/skeleton-module.svg?branch=master
-[travis-url]: https://travis-ci.org/IFTT/skeleton-module
-[npm-image]: https://img.shields.io/npm/v/@iftt/skeleton-module.svg
-[npm-url]: https://npmjs.org/package/@iftt/skeleton-module
-[downloads-image]: https://img.shields.io/npm/dm/@iftt/skeleton-module.svg
-[downloads-url]: https://npmjs.org/package/@iftt/skeleton-module
+[travis-image]: https://travis-ci.org/IFTT/tryte-buffer.svg?branch=master
+[travis-url]: https://travis-ci.org/IFTT/tryte-buffer
+[npm-image]: https://img.shields.io/npm/v/@iftt/tryte-buffer.svg
+[npm-url]: https://npmjs.org/package/@iftt/tryte-buffer
+[downloads-image]: https://img.shields.io/npm/dm/@iftt/tryte-buffer.svg
+[downloads-url]: https://npmjs.org/package/@iftt/tryte-buffer
 
 ## About
 
-**Create new modules with this skeleton**
-
-`git clone https://github.com/IFTT/skeleton-module.git`
-
-`git remote rm origin`
 
 ---
 

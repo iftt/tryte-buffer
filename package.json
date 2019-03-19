@@ -1,7 +1,7 @@
 {
-  "name": "@iftt/skeleton-module",
+  "name": "@iftt/tryte-buffer",
   "version": "1.0.0",
-  "description": "When creating new NodeJS modules, use this skeletal structure",
+  "description": "Efficiently enocode predefined datasets to trytes.",
   "main": "lib/index.js",
   "scripts": {
     "lint+build+test": "yarn run lint && yarn run build && yarn run test",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/iftt/skeleton-module.git"
+    "url": "https://github.com/iftt/tryte-buffer.git"
   },
   "author": "Craig OConnor",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/IFTT/skeleton-module/issues"
+    "url": "https://github.com/IFTT/tryte-buffer/issues"
   },
-  "homepage": "https://github.com/IFTT/skeleton-module#readme",
+  "homepage": "https://github.com/IFTT/tryte-buffer#readme",
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
@@ -30,5 +30,8 @@
     "eslint": "^4.0.0",
     "flow-bin": "^0.48.0",
     "tape": "^4.6.3"
+  },
+  "dependencies": {
+    "@iftt/tryte-encode-decode": "^1.1.0"
   }
 }

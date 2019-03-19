@@ -632,6 +632,11 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
+"@iftt/tryte-encode-decode@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@iftt/tryte-encode-decode/-/tryte-encode-decode-1.1.0.tgz#c4d3b544643dd050171be7668c59d9c065c77723"
+  integrity sha512-lasAz+ko5tSVVPolBjT169VpZGjiyy3jbFU46n/vhkPliEDUdYAcx7UmyxIb903esVbqJ4iYRxBA6aR/xDPLLA==
+
 abbrev@1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.0.tgz#d0554c2256636e2f56e7c2e5ad183f859428d81f"
