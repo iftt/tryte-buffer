@@ -1,0 +1,102 @@
+{
+  "date": {
+    "type": "date",
+    "units": "utc"
+  },
+  "winddir": {
+    "type": "uint16",
+    "units": "degrees"
+  },
+  "windspeedmph": {
+    "type": "uint16",
+    "units": "mph",
+    "precision": 1
+  },
+  "windgustmph": {
+    "type": "uint16",
+    "units": "mph",
+    "precision": 1
+  },
+  "maxdailygust": {
+    "type": "uint16",
+    "units": "mph",
+    "precision": 1
+  },
+  "tempf": {
+    "type": "uint16",
+    "units": "fahrenheit",
+    "precision": 1
+  },
+  "hourlyrainin": {
+    "type": "uint16",
+    "units": "in/hr",
+    "precision": 2
+  },
+  "eventrainin": {
+    "type": "uint16",
+    "units": "in/hr",
+    "precision": 2
+  },
+  "dailyrainin": {
+    "type": "uint16",
+    "units": "in",
+    "precision": 2
+  },
+  "weeklyrainin": {
+    "type": "uint16",
+    "units": "in",
+    "precision": 2
+  },
+  "monthlyrainin": {
+    "type": "uint16",
+    "units": "in",
+    "precision": 2
+  },
+  "totalrainin": {
+    "type": "uint32",
+    "units": "in",
+    "precision": 2
+  },
+  "baromrelin": {
+    "type": "uint16",
+    "units": "inHg",
+    "precision": 2
+  },
+  "baromabsin": {
+    "type": "uint16",
+    "units": "inHg",
+    "precision": 2
+  },
+  "humidity": {
+    "type": "uint8",
+    "units": "percent"
+  },
+  "tempinf": {
+    "type": "uint16",
+    "units": "fahrenheit",
+    "precision": 1
+  },
+  "humidityin": {
+    "type": "uint8",
+    "units": "in"
+  },
+  "uv": {
+    "type": "uint16",
+    "units": "index"
+  },
+  "solarradiation": {
+    "type": "uint32",
+    "units": "W/m^2",
+    "precision": 1
+  },
+  "feelsLike": {
+    "type": "uint16",
+    "units": "fahrenheit",
+    "precision": 1
+  },
+  "dewPoint": {
+    "type": "uint16",
+    "units": "fahrenheit",
+    "precision": 1
+  }
+}

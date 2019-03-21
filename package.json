@@ -33,6 +33,6 @@
     "tape": "^4.6.3"
   },
   "dependencies": {
-    "@iftt/tryte-encode-decode": "^1.1.6"
+    "@iftt/tryte-encode-decode": "^1.2.0"
   }
 }

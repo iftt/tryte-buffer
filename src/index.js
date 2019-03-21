@@ -13,6 +13,8 @@ type ProtocolInput = {
 
 class TryteBuffer {
   tryteLimit: number;
+  overTryteLimit: boolean;
+  lastEncodingSize: number;
   protocol: Protocol;
   [string]: function; // the encoding and decoding prepared from the protocol
   constructor(protocol: Protocol, tryteLimit: number = 2187) {
@@ -20,15 +22,21 @@ class TryteBuffer {
       return null;
     // given a protocol JSON file, create a function for each.
     this.tryteLimit = tryteLimit;
+    this.overTryteLimit = false;
+    this.lastEncodingSize = 0;
     this.protocol = protocol;
     createProtocol(this, protocol);
   }
 
   encode(input: ProtocolInput) {
     let trytes = '';
-    for (let key in this.protocol) {
+    for (let key in this.protocol)
       trytes += this[key].encode(input[key]);
-    }
+    this.lastEncodingSize = trytes.length;
+    if (this.tryteLimit && trytes.length > this.tryteLimit)
+      this.overTryteLimit = true;
+    else
+      this.overTryteLimit = false;
     return trytes;
   }
 

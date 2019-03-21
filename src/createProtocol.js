@@ -165,14 +165,12 @@ export function createProtocol(tryteBuffer: TryteBuffer, protocol: Protocol) {
           break;
         default:
           tryteBuffer[key] = {
-            encode: noop,
-            decode: noop
+            encode: (): string => { return ''; },
+            decode: (): null => { return [0, null]; }
           }
       }
     }
   }
 }
-
-function noop() {}
 
 export default { createProtocol }

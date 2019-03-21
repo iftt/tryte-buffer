@@ -14,8 +14,8 @@ test('test encoding and decoding a string by itself', function (t) {
   let tryteEncoding = tryteBuffer.encode(testInput);
   let decodedTrytes = tryteBuffer.decode(tryteEncoding);
 
-  t.equal('999JMBFDPCXCVC', tryteEncoding);
-  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes));
+  t.equal('999JMBFDPCXCVC', tryteEncoding, 'the encoded trytes');
+  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes), 'the decoded object is the same as the original input');
 });
 
 test('test encoding and decoding two string types', function (t) {
@@ -29,8 +29,8 @@ test('test encoding and decoding two string types', function (t) {
   let tryteEncoding = tryteBuffer.encode(testInput);
   let decodedTrytes = tryteBuffer.decode(tryteEncoding);
 
-  t.equal('999JMBFDPCXCVC999PYBLAMBCDBDBDCDFD', tryteEncoding);
-  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes));
+  t.equal('999JMBFDPCXCVC999PYBLAMBCDBDBDCDFD', tryteEncoding, 'the encoded trytes');
+  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes), 'the decoded object is the same as the original input');
 });
 
 test('test encoding and decoding an array of strings', function (t) {
@@ -44,8 +44,8 @@ test('test encoding and decoding an array of strings', function (t) {
   let tryteEncoding = tryteBuffer.encode(testInput);
   let decodedTrytes = tryteBuffer.decode(tryteEncoding);
 
-  t.equal('9C999RMBFDPCXCVCVC9DTCGD999FMBCCYB999LMBFDPCXCVCYB', tryteEncoding);
-  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes));
+  t.equal('9C999RMBFDPCXCVCVC9DTCGD999FMBCCYB999LMBFDPCXCVCYB', tryteEncoding, 'the encoded trytes');
+  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes), 'the decoded object is the same as the original input');
 });
 
 test('test encoding and decoding an 8 bit integer and 8 bit integer array', function (t) {
@@ -59,8 +59,8 @@ test('test encoding and decoding an 8 bit integer and 8 bit integer array', func
   let tryteEncoding = tryteBuffer.encode(testInput);
   let decodedTrytes = tryteBuffer.decode(tryteEncoding);
 
-  t.equal('IL9C99DTIL', tryteEncoding);
-  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes));
+  t.equal('IL9C99DTIL', tryteEncoding, 'the encoded trytes');
+  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes), 'the decoded object is the same as the original input');
 });
 
 test('test encoding and decoding an 8 bit unsigned integer and 8 bit unsigned integer array', function (t) {
@@ -74,8 +74,8 @@ test('test encoding and decoding an 8 bit unsigned integer and 8 bit unsigned in
   let tryteEncoding = tryteBuffer.encode(testInput);
   let decodedTrytes = tryteBuffer.decode(tryteEncoding);
 
-  t.equal('IL9C99CSIL', tryteEncoding);
-  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes));
+  t.equal('IL9C99CSIL', tryteEncoding, 'the encoded trytes');
+  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes), 'the decoded object is the same as the original input');
 });
 
 test('test encoding and decoding an 16 bit integer and 16 bit integer array', function (t) {
@@ -89,8 +89,8 @@ test('test encoding and decoding an 16 bit integer and 16 bit integer array', fu
   let tryteEncoding = tryteBuffer.encode(testInput);
   let decodedTrytes = tryteBuffer.decode(tryteEncoding);
 
-  t.equal('CHXF9C9999AQYQCHXF', tryteEncoding);
-  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes));
+  t.equal('CHXF9C9999AQYQCHXF', tryteEncoding, 'the encoded trytes');
+  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes), 'the decoded object is the same as the original input');
 });
 
 test('test encoding and decoding an 16 bit unsigned integer and 16 bit unsigned integer array', function (t) {
@@ -104,8 +104,8 @@ test('test encoding and decoding an 16 bit unsigned integer and 16 bit unsigned 
   let tryteEncoding = tryteBuffer.encode(testInput);
   let decodedTrytes = tryteBuffer.decode(tryteEncoding);
 
-  t.equal('CHXF9C99999MSJCHXF', tryteEncoding);
-  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes));
+  t.equal('CHXF9C99999MSJCHXF', tryteEncoding, 'the encoded trytes');
+  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes), 'the decoded object is the same as the original input');
 });
 
 test('test encoding and decoding an 32 bit integer and 32 bit integer array', function (t) {
@@ -119,8 +119,8 @@ test('test encoding and decoding an 32 bit integer and 32 bit integer array', fu
   let tryteEncoding = tryteBuffer.encode(testInput);
   let decodedTrytes = tryteBuffer.decode(tryteEncoding);
 
-  t.equal('KBHSYMU9C9999999ENQWLTKKBHSYMU', tryteEncoding);
-  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes));
+  t.equal('KBHSYMU9C9999999ENQWLTKKBHSYMU', tryteEncoding, 'the encoded trytes');
+  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes), 'the decoded object is the same as the original input');
 });
 
 test('test encoding and decoding an 32 bit unsigned integer and 32 bit unsigned integer array', function (t) {
@@ -134,8 +134,8 @@ test('test encoding and decoding an 32 bit unsigned integer and 32 bit unsigned 
   let tryteEncoding = tryteBuffer.encode(testInput);
   let decodedTrytes = tryteBuffer.decode(tryteEncoding);
 
-  t.equal('KBHSYMU9C9999999BORRGCAKBHSYMU', tryteEncoding);
-  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes));
+  t.equal('KBHSYMU9C9999999BORRGCAKBHSYMU', tryteEncoding, 'the encoded trytes');
+  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes), 'the decoded object is the same as the original input');
 });
 
 test('test encoding and decoding a bool and bool array', function (t) {
@@ -149,8 +149,8 @@ test('test encoding and decoding a bool and bool array', function (t) {
   let tryteEncoding = tryteBuffer.encode(testInput);
   let decodedTrytes = tryteBuffer.decode(tryteEncoding);
 
-  t.equal('A9D9A99', tryteEncoding);
-  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes));
+  t.equal('A9D9A99', tryteEncoding, 'the encoded trytes');
+  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes), 'the decoded object is the same as the original input');
 });
 
 test('test encoding and decoding a date and date array', function (t) {
@@ -164,8 +164,8 @@ test('test encoding and decoding a date and date array', function (t) {
   let tryteEncoding = tryteBuffer.encode(testInput);
   let decodedTrytes = tryteBuffer.decode(tryteEncoding);
 
-  t.equal('D9F9RH99CD9F9REU999999ECZSLHMC', tryteEncoding);
-  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes));
+  t.equal('D9F9RH99CD9F9REU999999ECZSLHMC', tryteEncoding, 'the encoded trytes');
+  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes), 'the decoded object is the same as the original input');
 });
 
 test('test encoding and decoding an enum', function (t) {
@@ -179,22 +179,22 @@ test('test encoding and decoding an enum', function (t) {
   let tryteEncoding = tryteBuffer.encode(testInput);
   let decodedTrytes = tryteBuffer.decode(tryteEncoding);
 
-  t.equal('99', tryteEncoding);
-  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes));
+  t.equal('99', tryteEncoding, 'the encoded trytes 1');
+  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes), 'the decoded object is the same as the original input 1');
 
   testInput     = { phoneType: 'work' };
   tryteEncoding = tryteBuffer.encode(testInput);
   decodedTrytes = tryteBuffer.decode(tryteEncoding);
 
-  t.equal('9A', tryteEncoding);
-  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes));
+  t.equal('9A', tryteEncoding, 'the encoded trytes 2');
+  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes), 'the decoded object is the same as the original input 2');
 
   testInput     = { phoneType: 'home' };
   tryteEncoding = tryteBuffer.encode(testInput);
   decodedTrytes = tryteBuffer.decode(tryteEncoding);
 
-  t.equal('9B', tryteEncoding);
-  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes));
+  t.equal('9B', tryteEncoding, 'the encoded trytes 3');
+  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes), 'the decoded object is the same as the original input 3');
 });
 
 test('test encoding and decoding of multiple kinds of arrays', function (t) {
@@ -220,8 +220,8 @@ test('test encoding and decoding of multiple kinds of arrays', function (t) {
 
   // '9D 9 A 9 9    9D DT DU DV DW     9D 999B PC 999B QC 999D RC SC 999F TC UC VC    9C 9999999 999999J 999999T'
 
-  t.equal('9D9A999DDTDUDVDW9D999BPC999BQC999DRCSC999FTCUCVC9C9999999999999J999999T', tryteEncoding);
-  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes));
+  t.equal('9D9A999DDTDUDVDW9D999BPC999BQC999DRCSC999FTCUCVC9C9999999999999J999999T', tryteEncoding, 'the encoded trytes');
+  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes), 'the decoded object is the same as the original input');
 });
 
 test('test encoding and decoding using the example address protocol', function (t) {
@@ -232,15 +232,15 @@ test('test encoding and decoding using the example address protocol', function (
     name: 'Craig O\'Connor',
     aliases: ['CTO', 'Craiggles', 'Goober'],
     id: 76543456,
-    phone: '+13362554148',
+    phone: '+8005555555',
     phoneType: 'work'
   };
 
   let tryteEncoding = tryteBuffer.encode(testInput);
   let decodedTrytes = tryteBuffer.decode(tryteEncoding);
 
-  t.equal('99AAMBFDPCXCVCEAYBLAMBCDBDBDCDFD9C999FMBCCYB999RMBFDPCXCVCVC9DTCGD999LQBCDCDQCTCFD9EI9UWV999XPAVAXAXA9BWAZAZAYAVAYABB9A', tryteEncoding);
-  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes));
+  t.equal('99AAMBFDPCXCVCEAYBLAMBCDBDBDCDFD9C999FMBCCYB999RMBFDPCXCVCVC9DTCGD999LQBCDCDQCTCFD9EI9UWV999VPABBUAUAZAZAZAZAZAZAZA9A', tryteEncoding, 'the encoded trytes');
+  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes), 'the decoded object is the same as the original input');
 });
 
 test('test encoding and decoding with excess inputs', function (t) {
@@ -254,8 +254,8 @@ test('test encoding and decoding with excess inputs', function (t) {
   let tryteEncoding = tryteBuffer.encode(testInput);
   let decodedTrytes = tryteBuffer.decode(tryteEncoding);
 
-  t.equal('999JMBFDPCXCVC', tryteEncoding);
-  t.equal(JSON.stringify({ name: 'Craig' }), JSON.stringify(decodedTrytes));
+  t.equal('999JMBFDPCXCVC', tryteEncoding, 'the encoded trytes');
+  t.equal(JSON.stringify({ name: 'Craig' }), JSON.stringify(decodedTrytes), 'the decoded object is the same as the original input');
 });
 
 test('test encoding and decoding int 8 with precision', function (t) {
@@ -269,8 +269,8 @@ test('test encoding and decoding int 8 with precision', function (t) {
   let tryteEncoding = tryteBuffer.encode(testInput);
   let decodedTrytes = tryteBuffer.decode(tryteEncoding);
 
-  t.equal('FU', tryteEncoding);
-  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes));
+  t.equal('FU', tryteEncoding, 'the encoded trytes');
+  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes), 'the decoded object is the same as the original input');
 });
 
 test('test encoding and decoding int 8 with precision and overflow', function (t) {
@@ -284,8 +284,8 @@ test('test encoding and decoding int 8 with precision and overflow', function (t
   let tryteEncoding = tryteBuffer.encode(testInput);
   let decodedTrytes = tryteBuffer.decode(tryteEncoding);
 
-  t.equal('FV', tryteEncoding);
-  t.equal(JSON.stringify({ int: 5.6 }), JSON.stringify(decodedTrytes));
+  t.equal('FV', tryteEncoding, 'the encoded trytes');
+  t.equal(JSON.stringify({ int: 5.6 }), JSON.stringify(decodedTrytes), 'the decoded object is the same as the original input');
 });
 
 test('test encoding and decoding unsigned int 8 with precision', function (t) {
@@ -299,8 +299,8 @@ test('test encoding and decoding unsigned int 8 with precision', function (t) {
   let tryteEncoding = tryteBuffer.encode(testInput);
   let decodedTrytes = tryteBuffer.decode(tryteEncoding);
 
-  t.equal('BA', tryteEncoding);
-  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes));
+  t.equal('BA', tryteEncoding, 'the encoded trytes');
+  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes), 'the decoded object is the same as the original input');
 });
 
 test('test encoding and decoding unsigned int 8 with precision with overflow', function (t) {
@@ -314,8 +314,8 @@ test('test encoding and decoding unsigned int 8 with precision with overflow', f
   let tryteEncoding = tryteBuffer.encode(testInput);
   let decodedTrytes = tryteBuffer.decode(tryteEncoding);
 
-  t.equal('BB', tryteEncoding);
-  t.equal(JSON.stringify({ uint: 5.6 }), JSON.stringify(decodedTrytes));
+  t.equal('BB', tryteEncoding, 'the encoded trytes');
+  t.equal(JSON.stringify({ uint: 5.6 }), JSON.stringify(decodedTrytes), 'the decoded object is the same as the original input');
 });
 
 test('test encoding and decoding int 16 with precision', function (t) {
@@ -329,8 +329,8 @@ test('test encoding and decoding int 16 with precision', function (t) {
   let tryteEncoding = tryteBuffer.encode(testInput);
   let decodedTrytes = tryteBuffer.decode(tryteEncoding);
 
-  t.equal('ARSE', tryteEncoding);
-  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes));
+  t.equal('ARSE', tryteEncoding, 'the encoded trytes');
+  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes), 'the decoded object is the same as the original input');
 });
 
 test('test encoding and decoding int 16 with precision and overflow', function (t) {
@@ -344,8 +344,8 @@ test('test encoding and decoding int 16 with precision and overflow', function (
   let tryteEncoding = tryteBuffer.encode(testInput);
   let decodedTrytes = tryteBuffer.decode(tryteEncoding);
 
-  t.equal('ARSF', tryteEncoding);
-  t.equal(JSON.stringify({ int: 5.56 }), JSON.stringify(decodedTrytes));
+  t.equal('ARSF', tryteEncoding, 'the encoded trytes');
+  t.equal(JSON.stringify({ int: 5.56 }), JSON.stringify(decodedTrytes), 'the decoded object is the same as the rounded version of the original object');
 });
 
 test('test encoding and decoding unsigned int 16 with precision', function (t) {
@@ -359,8 +359,8 @@ test('test encoding and decoding unsigned int 16 with precision', function (t) {
   let tryteEncoding = tryteBuffer.encode(testInput);
   let decodedTrytes = tryteBuffer.decode(tryteEncoding);
 
-  t.equal('99TO', tryteEncoding);
-  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes));
+  t.equal('99TO', tryteEncoding, 'the encoded trytes');
+  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes), 'the decoded object is the same as the original input');
 });
 
 test('test encoding and decoding unsigned int 16 with precision and overflow', function (t) {
@@ -374,8 +374,8 @@ test('test encoding and decoding unsigned int 16 with precision and overflow', f
   let tryteEncoding = tryteBuffer.encode(testInput);
   let decodedTrytes = tryteBuffer.decode(tryteEncoding);
 
-  t.equal('99TP', tryteEncoding);
-  t.equal(JSON.stringify({ uint: 5.56 }), JSON.stringify(decodedTrytes));
+  t.equal('99TP', tryteEncoding, 'the encoded trytes');
+  t.equal(JSON.stringify({ uint: 5.56 }), JSON.stringify(decodedTrytes), 'the decoded object is the same as the rounded version of the original object');
 });
 
 test('test encoding and decoding int 32 with precision', function (t) {
@@ -389,8 +389,8 @@ test('test encoding and decoding int 32 with precision', function (t) {
   let tryteEncoding = tryteBuffer.encode(testInput);
   let decodedTrytes = tryteBuffer.decode(tryteEncoding);
 
-  t.equal('ENQZGZ9', tryteEncoding);
-  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes));
+  t.equal('ENQZGZ9', tryteEncoding, 'the encoded trytes');
+  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes), 'the decoded object is the same as the original input');
 });
 
 test('test encoding and decoding int 32 with precision and overflow', function (t) {
@@ -404,8 +404,8 @@ test('test encoding and decoding int 32 with precision and overflow', function (
   let tryteEncoding = tryteBuffer.encode(testInput);
   let decodedTrytes = tryteBuffer.decode(tryteEncoding);
 
-  t.equal('ENQZGZA', tryteEncoding);
-  t.equal(JSON.stringify({ int: 5.5556 }), JSON.stringify(decodedTrytes));
+  t.equal('ENQZGZA', tryteEncoding, 'the encoded trytes');
+  t.equal(JSON.stringify({ int: 5.5556 }), JSON.stringify(decodedTrytes), 'the decoded object is the same as the rounded version of the original object');
 });
 
 test('test encoding and decoding unsigned int 32 with precision', function (t) {
@@ -419,8 +419,8 @@ test('test encoding and decoding unsigned int 32 with precision', function (t) {
   let tryteEncoding = tryteBuffer.encode(testInput);
   let decodedTrytes = tryteBuffer.decode(tryteEncoding);
 
-  t.equal('999BVEP', tryteEncoding);
-  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes));
+  t.equal('999BVEP', tryteEncoding, 'the encoded trytes');
+  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes), 'the decoded object is the same as the original input');
 });
 
 test('test encoding and decoding unsigned int 32 with precision and overflow', function (t) {
@@ -434,6 +434,49 @@ test('test encoding and decoding unsigned int 32 with precision and overflow', f
   let tryteEncoding = tryteBuffer.encode(testInput);
   let decodedTrytes = tryteBuffer.decode(tryteEncoding);
 
-  t.equal('999BVEQ', tryteEncoding);
-  t.equal(JSON.stringify({ uint: 5.5556 }), JSON.stringify(decodedTrytes));
+  t.equal('999BVEQ', tryteEncoding, 'the encoded trytes');
+  t.equal(JSON.stringify({ uint: 5.5556 }), JSON.stringify(decodedTrytes), 'the decoded object is the same as the rounded version of the original object');
+});
+
+test('test encoding tryte limit', function (t) {
+  t.plan(2);
+
+  let protocol = { intArray: { type: 'int32', repeat: true } };
+
+  const tryteBuffer = new TryteBuffer(protocol, 10);
+  const testInput   = { intArray: [0, 1, 2, 3, 4] };
+
+  let tryteEncoding = tryteBuffer.encode(testInput);
+
+  t.equal(10, tryteBuffer.tryteLimit, 'the tryte limit is properly update upon instantiation');
+  t.equal(true, tryteBuffer.overTryteLimit, 'the maximum tryte value is exceeded');
+});
+
+test('test last encoding size', function (t) {
+  t.plan(2);
+
+  let protocol = { intArray: { type: 'int32', repeat: true } };
+
+  const tryteBuffer = new TryteBuffer(protocol);
+  const testInput   = { intArray: [0, 1, 2, 3, 4] };
+
+  let tryteEncoding = tryteBuffer.encode(testInput);
+
+  t.equal('9EENQWLTKENQWLTLENQWLTMENQWLTNENQWLTO', tryteEncoding, 'the encoded trytes');
+  t.equal(37, tryteBuffer.lastEncodingSize, 'the size is recorded correctly');
+});
+
+test('test "bad" type', function (t) {
+  t.plan(2);
+
+  let protocol = { intArray: { type: 'intint32' } };
+
+  const tryteBuffer = new TryteBuffer(protocol);
+  const testInput   = { intArray: 5 };
+
+  let tryteEncoding = tryteBuffer.encode(testInput);
+  let decodedTrytes = tryteBuffer.decode(tryteEncoding);
+
+  t.equal('', tryteEncoding, 'the encoded trytes');
+  t.equal(JSON.stringify({ intArray: null }), JSON.stringify(decodedTrytes), 'the decoded object is the same as the original input');
 });
