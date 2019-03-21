@@ -8,7 +8,7 @@
 [downloads-url]: https://npmjs.org/package/@iftt/tryte-buffer
 
 ## About
-Tryte buffers are designed to be language-neutral, platform-neutral, extensible mechanism for serializing structured data to the 'tryte' schema used by the IOTA tangle. You define your structure once in JSON and this module will take care of encoding all future object data to 'tryte's and back again.
+Tryte buffers are designed to be language-neutral, platform-neutral, extensible mechanism for serializing structured data to the `tryte` schema used by the IOTA tangle. You define your structure once in JSON and this module will take care of encoding all future object data to `trytes` and back again.
 
 Find the encoding/decoding module [here](https://github.com/iftt/tryte-encode-decode)
 
@@ -58,7 +58,7 @@ You define the protocol using JSON, as this is web friendly and supported by alm
 The encoding/decoding options are as follows:
 ```js
 {
-  type: string ['string' | 'int8' | 'uint8' | 'int16' | 'uint16' | 'int32' | 'uint32' | 'bool' | 'date'],
+  type: 'string' | 'int8' | 'uint8' | 'int16' | 'uint16' | 'int32' | 'uint32' | 'bool' | 'date',
   repeat: boolean, // is the data an array?
   enum: array<string | number>, // an array of all possible values
   precision: 2 // this is only for number types and defines how many decimal places you want to keep
@@ -95,13 +95,13 @@ let addressProtocol = {
 ```js
 type Protocol = {
   [string]: { // key
-    [string]: any // type, enum, repeat, precision, or any user defined variables
+    [string]: any // key is type, enum, repeat, precision, or any user defined variables
   }
 }
 ```
 
 ### new TryteBuffer(protocol: Protocol, [tryteLimit: number = 2187])
-* tryteLimit: number;
+* tryteLimit: number; `defaults to 2187. If you specify 0 then there is no limit`
 * overTryteLimit: boolean;
 * lastEncodingSize: number;
 * protocol: Protocol;
