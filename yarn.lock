@@ -632,10 +632,10 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
-"@iftt/tryte-encode-decode@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@iftt/tryte-encode-decode/-/tryte-encode-decode-1.1.0.tgz#c4d3b544643dd050171be7668c59d9c065c77723"
-  integrity sha512-lasAz+ko5tSVVPolBjT169VpZGjiyy3jbFU46n/vhkPliEDUdYAcx7UmyxIb903esVbqJ4iYRxBA6aR/xDPLLA==
+"@iftt/tryte-encode-decode@^1.1.6":
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/@iftt/tryte-encode-decode/-/tryte-encode-decode-1.1.6.tgz#af5fdb69323c36ed46cdc917c424115f73d33c2f"
+  integrity sha512-hHgRoV/ZNy8uDJcw5BKfiEBH9scGMTP9odsKDtg8bYeDMGDl0XicrD0YBrIkZ7KTRrn3hh+pq+nvW3vMJOzfig==
 
 abbrev@1:
   version "1.1.0"
@@ -1165,6 +1165,13 @@ escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
   integrity sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
+
+eslint-plugin-flowtype@^3.4.2:
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-3.4.2.tgz#55475e10b05fd714d60bceebbbed596cb8706b16"
+  integrity sha512-sv6O6fiN3dIwhU4qRxfcyIpbKGVvsxwIQ6vgBLudpQKjH1rEyEFEOjGzGEUBTQP9J8LdTZm37OjiqZ0ZeFOa6g==
+  dependencies:
+    lodash "^4.17.11"
 
 eslint-scope@3.7.1, eslint-scope@^3.7.1:
   version "3.7.1"

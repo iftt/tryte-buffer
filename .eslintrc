@@ -4,6 +4,12 @@
     "ecmaVersion": 6,
     "sourceType": "module"
   },
+  "extends": [
+    "plugin:flowtype/recommended"
+  ],
+  "plugins": [
+    "flowtype"
+  ],
   "rules": {
     "strict": 0,
     "indent": [2, 2, {"SwitchCase": 1}],

@@ -28,10 +28,11 @@
     "@babel/preset-flow": "^7.0.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^4.0.0",
+    "eslint-plugin-flowtype": "^3.4.2",
     "flow-bin": "^0.48.0",
     "tape": "^4.6.3"
   },
   "dependencies": {
-    "@iftt/tryte-encode-decode": "^1.1.0"
+    "@iftt/tryte-encode-decode": "^1.1.6"
   }
 }

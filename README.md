@@ -10,6 +10,9 @@
 ## About
 
 
+## Status
+Ready but in need of documentation
+
 ---
 
 ## ISC License (ISC)
