@@ -65,7 +65,7 @@ The encoding/decoding options are as follows:
 }
 ```
 
-### Example protocol
+## Example protocol
 Although this is not an exhaustive list of possible use cases, it is relatable data.
 ```js
 let addressProtocol = {
@@ -88,6 +88,32 @@ let addressProtocol = {
   }
 }
 ```
+
+## API
+
+### type Protocol
+```js
+type Protocol = {
+  [string]: { // key
+    [string]: any // type, enum, repeat, precision, or any user defined variables
+  }
+}
+```
+
+### new TryteBuffer(protocol: Protocol, [tryteLimit: number = 2187])
+* tryteLimit: number;
+* overTryteLimit: boolean;
+* lastEncodingSize: number;
+* protocol: Protocol;
+* [string]: { ['encode' | 'decode']: function }; `the keys with encoding and decoding prepared from the protocol`
+
+### encode(input: ProtocolInput): string
+* input: an object containing the same keys and values as described by the protocol submitted on instantiation
+* output: encoded trytes
+
+### decode(trytes: string): { [string]: any }
+* trytes: a string of encoded trytes
+* output: a decoded object with the same keys and values as submitted by the protocol buffer
 
 ---
 

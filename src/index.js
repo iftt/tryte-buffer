@@ -16,7 +16,7 @@ class TryteBuffer {
   overTryteLimit: boolean;
   lastEncodingSize: number;
   protocol: Protocol;
-  [string]: function; // the encoding and decoding prepared from the protocol
+  [string]: { ['encode' | 'decode']: function }; // the encoding and decoding prepared from the protocol
   constructor(protocol: Protocol, tryteLimit: number = 2187) {
     if (!protocol)
       return null;
@@ -28,7 +28,7 @@ class TryteBuffer {
     createProtocol(this, protocol);
   }
 
-  encode(input: ProtocolInput) {
+  encode(input: ProtocolInput): string {
     let trytes = '';
     for (let key in this.protocol)
       trytes += this[key].encode(input[key]);
@@ -40,7 +40,7 @@ class TryteBuffer {
     return trytes;
   }
 
-  decode(trytes: string) {
+  decode(trytes: string): { [string]: any } {
     let obj = {};
     for (let key in this.protocol) {
       let [inc, val] = this[key].decode(trytes);
