@@ -27,6 +27,10 @@
     "units": "fahrenheit",
     "precision": 1
   },
+  "lastRain": {
+    "type": "date",
+    "units": "utc"
+  },
   "hourlyrainin": {
     "type": "uint16",
     "units": "in/hr",
