@@ -7,16 +7,17 @@ export type Protocol = {
   }
 };
 
-export type TypeSizes = {
-  int8: number,
-  uint8: number,
-  int16: number,
-  uint16: number,
-  int32: number,
-  uint32: number,
-  bool: numbber,
-  date: number
-};
+// export type TypeSizes = {
+//   int8: number,
+//   uint8: number,
+//   int16: number,
+//   uint16: number,
+//   int32: number,
+//   uint32: number,
+//   bool: numbber,
+//   date: number,
+//   geo: number
+// };
 
 export function createProtocol(tryteBuffer: TryteBuffer, protocol: Protocol) {
   for (let key in protocol) {
@@ -161,6 +162,12 @@ export function createProtocol(tryteBuffer: TryteBuffer, protocol: Protocol) {
           tryteBuffer[key] = {
             encode: (value: Date): string => { return tryteConverter.dateToTrytes(value); },
             decode: (trytes: string): Date => { return [typesizes.date, tryteConverter.trytesToDate(trytes.slice(0, 7))]; }
+          }
+          break;
+        case 'geo':
+          tryteBuffer[key] = {
+            encode: (value: { lat: number, lon: number }): string => { return tryteConverter.geoToTrytes(value); },
+            decode: (trytes: string): { lat: number, lon: number } => { return [typesizes.geo, tryteConverter.trytesToGeo(trytes.slice(0, 12))]; }
           }
           break;
         default:

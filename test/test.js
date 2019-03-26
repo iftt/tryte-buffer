@@ -164,8 +164,23 @@ test('test encoding and decoding a date and date array', function (t) {
   let tryteEncoding = tryteBuffer.encode(testInput);
   let decodedTrytes = tryteBuffer.decode(tryteEncoding);
 
-  t.equal('D9F9RH99CD9F9REU999999ECZSLHMC', tryteEncoding, 'the encoded trytes');
+  t.equal('D9F9RH99CD9F9REU999999ECZSKYPL', tryteEncoding, 'the encoded trytes');
   t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes), 'the decoded object is the same as the original input');
+});
+
+test('test encoding and decoding geospatial coordinates and geospatial coordinates array', function (t) {
+  t.plan(2);
+
+  let protocol = { geo: { type: 'geo' }, geoArray: { type: 'geo', repeat: true } };
+
+  const tryteBuffer = new TryteBuffer(protocol);
+  const testInput   = { geo: { lat: 52.529562, lon: 13.413047 }, geoArray: [{lat: 52.52956250000001, lon :13.413046874999981}, {lat: 40.71426249999996, lon :-74.005984375}, {lat: 0.0000125, lon :0.000015625}] };
+
+  let tryteEncoding = tryteBuffer.encode(testInput);
+  let decodedTrytes = tryteBuffer.decode(tryteEncoding);
+
+  t.equal('NPHTQORL9XKP9CNPHTQORL9XKPMLQLUZLW9USFKPQFFFFF9FFF', tryteEncoding, 'the encoded trytes');
+  t.equal(JSON.stringify({geo: {lat:52.52956250000001, lon:13.413046874999981}, geoArray:[{lat:52.52956250000001, lon:13.413046874999981}, {lat:40.71426249999996, lon:-74.005984375}, {lat:0.0000125, lon:0.000015625}]}), JSON.stringify(decodedTrytes), 'the decoded object is similar (stores geo as a "square" location) to the original input');
 });
 
 test('test encoding and decoding an enum', function (t) {
@@ -233,13 +248,17 @@ test('test encoding and decoding using the example address protocol', function (
     aliases: ['CTO', 'Craiggles', 'Goober'],
     id: 76543456,
     phone: '+8005555555',
-    phoneType: 'work'
+    phoneType: 'work',
+    location: { lat: 40.7607800, lon: -111.8910500 }
   };
 
   let tryteEncoding = tryteBuffer.encode(testInput);
   let decodedTrytes = tryteBuffer.decode(tryteEncoding);
 
-  t.equal('99AAMBFDPCXCVCEAYBLAMBCDBDBDCDFD9C999FMBCCYB999RMBFDPCXCVCVC9DTCGD999LQBCDCDQCTCFD9EI9UWV999VPABBUAUAZAZAZAZAZAZAZA9A', tryteEncoding, 'the encoded trytes');
+  testInput.location.lat = 40.760787500000006 // how it should get stored
+  testInput.location.lon = -111.89104687500001 // how it should get stored
+
+  t.equal('99AAMBFDPCXCVCEAYBLAMBCDBDBDCDFD9C999FMBCCYB999RMBFDPCXCVCVC9DTCGD999LQBCDCDQCTCFD9EI9UWV999VPABBUAUAZAZAZAZAZAZAZA9AMJQOVHKJ9MRM', tryteEncoding, 'the encoded trytes');
   t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes), 'the decoded object is the same as the original input');
 });
 

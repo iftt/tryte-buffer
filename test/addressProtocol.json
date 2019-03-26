@@ -15,5 +15,8 @@
   "phoneType": {
     "type": "string",
     "enum": ["mobile", "work", "home"]
+  },
+  "location": {
+    "type": "geo"
   }
 }

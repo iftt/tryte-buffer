@@ -1,6 +1,6 @@
 {
   "name": "@iftt/tryte-buffer",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "Efficiently enocode predefined datasets to trytes.",
   "main": "lib/index.js",
   "scripts": {
@@ -33,6 +33,6 @@
     "tape": "^4.6.3"
   },
   "dependencies": {
-    "@iftt/tryte-encode-decode": "^1.2.0"
+    "@iftt/tryte-encode-decode": "^1.5.1"
   }
 }
