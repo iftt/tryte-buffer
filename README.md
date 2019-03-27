@@ -25,9 +25,9 @@ yarn add tryte-buffer
 ```js
 // import package
 // ES5
-const tryteConverter = require('@iftt/tryte-buffer').default;
+const TryteBuffer = require('@iftt/tryte-buffer').default;
 // ES6
-import tryteConverter from '@iftt/tryte-buffer';
+import TryteBuffer from '@iftt/tryte-buffer';
 
 const tryteBuffer = new TryteBuffer(addressProtocol);
 
