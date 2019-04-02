@@ -1,0 +1,9 @@
+{
+  "date": {
+    "type": "date",
+    "units": "utc"
+  },
+  "garageDoor": {
+    "type": "bool"
+  }
+}

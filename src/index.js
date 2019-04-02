@@ -17,7 +17,7 @@ class TryteBuffer {
   lastEncodingSize: number;
   protocol: Protocol;
   [string]: { ['encode' | 'decode']: function }; // the encoding and decoding prepared from the protocol
-  constructor(protocol: Protocol, tryteLimit: number = 2187) {
+  constructor(protocol: Protocol, tryteLimit: number = 2187, multi: boolean = false) {
     if (!protocol)
       return null;
     // given a protocol JSON file, create a function for each.

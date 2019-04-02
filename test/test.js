@@ -2,6 +2,7 @@ const test = require('tape');
 const TryteBuffer = require('../lib').default;
 
 const addressProtocol = require('./addressProtocol.json');
+const garageProtocol  = require('./garageProtocol.json');
 
 test('test encoding and decoding a string by itself', function (t) {
   t.plan(2);
@@ -259,6 +260,33 @@ test('test encoding and decoding using the example address protocol', function (
   testInput.location.lon = -111.89104687500001 // how it should get stored
 
   t.equal('99AAMBFDPCXCVCEAYBLAMBCDBDBDCDFD9C999FMBCCYB999RMBFDPCXCVCVC9DTCGD999LQBCDCDQCTCFD9EI9UWV999VPABBUAUAZAZAZAZAZAZAZA9AMJQOVHKJ9MRM', tryteEncoding, 'the encoded trytes');
+  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes), 'the decoded object is the same as the original input');
+});
+
+test('test encoding and decoding using the example garage protocol', function (t) {
+  t.plan(4);
+
+  const tryteBuffer = new TryteBuffer(garageProtocol);
+  let testInput     = {
+    date: new Date('2019-03-18T04:39:00.000Z'),
+    garageDoor: false
+  };
+
+  let tryteEncoding = tryteBuffer.encode(testInput);
+  let decodedTrytes = tryteBuffer.decode(tryteEncoding);
+
+  t.equal('D9F9RH99', tryteEncoding, 'the encoded trytes');
+  t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes), 'the decoded object is the same as the original input');
+
+  testInput = {
+    date: new Date(1000),
+    garageDoor: true
+  };
+
+  tryteEncoding = tryteBuffer.encode(testInput);
+  decodedTrytes = tryteBuffer.decode(tryteEncoding);
+
+  t.equal('999999AA', tryteEncoding, 'the encoded trytes');
   t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes), 'the decoded object is the same as the original input');
 });
 
