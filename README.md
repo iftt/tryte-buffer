@@ -1,11 +1,11 @@
-# Tryte Buffer [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![Greenkeeper badge](https://badges.greenkeeper.io/IFTT/tryte-buffer.svg)](https://greenkeeper.io/)
+# tryte-buffer [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-[travis-image]: https://travis-ci.org/IFTT/tryte-buffer.svg?branch=master
-[travis-url]: https://travis-ci.org/IFTT/tryte-buffer
+[travis-image]: https://travis-ci.org/iftt/tryte-buffer.svg?branch=master
+[travis-url]: https://travis-ci.org/iftt/tryte-buffer
 [npm-image]: https://img.shields.io/npm/v/@iftt/tryte-buffer.svg
 [npm-url]: https://npmjs.org/package/@iftt/tryte-buffer
 [downloads-image]: https://img.shields.io/npm/dm/@iftt/tryte-buffer.svg
-[downloads-url]: https://npmjs.org/package/@iftt/tryte-buffer
+[downloads-url]: https://www.npmjs.com/package/@iftt/tryte-buffer
 
 ## About
 Tryte buffers are designed to be language-neutral, platform-neutral, extensible mechanism for serializing structured data to the `tryte` schema used by the IOTA tangle. You define your structure once in JSON and this module will take care of encoding all future object data to `trytes` and back again.
