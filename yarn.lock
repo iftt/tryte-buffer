@@ -743,10 +743,10 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
-"@iftt/tryte-encode-decode@^1.6.0":
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/@iftt/tryte-encode-decode/-/tryte-encode-decode-1.6.0.tgz#f8d2b60b6ae851073c48469542739987a81b4b90"
-  integrity sha512-WaUXbWX9sJX++RswfwDZfESGzqmE2KviiytBdsbD6So/awmi/eoGYVZ5h/azgoSYRiZtnhGguwmN7IU8PCx9XQ==
+"@iftt/tryte-encode-decode@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@iftt/tryte-encode-decode/-/tryte-encode-decode-1.7.0.tgz#996992e2ba89da8cc964d0b98470f13e5abd2156"
+  integrity sha512-XZikWiITc4N+5qDU47Gpy//ZvmlQJV+WDlhvzkM9giNv+Rj+juArKz5DIuMEHh7Px+AvG+VzGXaB5HSGVVYfDg==
   dependencies:
     "@iota/area-codes" "^0.1.0"
 

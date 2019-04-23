@@ -2,6 +2,8 @@
 import TryteBuffer from './'
 import tryteConverter, { typesizes } from '@iftt/tryte-encode-decode'
 
+const debug = require('debug')('tryte-buffer')
+
 export type Protocol = {
   [string]: {
     [string]: any
@@ -21,6 +23,7 @@ export type Protocol = {
 // };
 
 export function createProtocol (tryteBuffer: TryteBuffer, protocol: Protocol) {
+  debug('createProtocol')
   for (let key in protocol) {
     if (protocol[key].repeat) {
       // convert an array

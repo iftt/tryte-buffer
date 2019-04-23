@@ -46,6 +46,12 @@ let decodedTrytes = tryteBuffer.decode(tryteEncoding);
 // decodedTrytes === { name: 'Craig O\'Connor', aliases: ['CTO', 'Craiggles', 'Goober'], id: 76543456, phone: '+8005555555', phoneType: 'work' }
 ```
 
+## Debug
+if you need to debug use the string `tryte-buffer`
+```sh
+DEBUG=tryte-buffer node x
+```
+
 ## Encoding guidelines
 You define the protocol using JSON, as this is web friendly and supported by almost every common language in use today. The keys define the name of future input data:
 ```js

@@ -1,6 +1,8 @@
 // @flow
 import { createProtocol } from './createProtocol'
 
+const debug = require('debug')('tryte-buffer')
+
 type Protocol = {
   [string]: {
     [string]: any
@@ -18,6 +20,7 @@ class TryteBuffer {
   protocol: Protocol
   // [key: string]: { ['encode' | 'decode']: Function }
   constructor (protocol: Protocol, tryteLimit: number = 2187, multi: boolean = false) {
+    debug('TryteBuffer created')
     if (!protocol) { return null }
     // given a protocol JSON file, create a function for each.
     this.tryteLimit = tryteLimit
@@ -28,6 +31,7 @@ class TryteBuffer {
   }
 
   encode (input: ProtocolInput): string {
+    debug('encode')
     let trytes = ''
     for (let key in this.protocol) { trytes += this[key].encode(input[key]) }
     this.lastEncodingSize = trytes.length
@@ -36,6 +40,7 @@ class TryteBuffer {
   }
 
   decode (trytes: string): { [string]: any } {
+    debug('decode')
     let obj = {}
     for (let key in this.protocol) {
       let [inc, val] = this[key].decode(trytes)
