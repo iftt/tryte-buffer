@@ -160,12 +160,12 @@ test('test encoding and decoding a date and date array', function (t) {
   let protocol = { date: { type: 'date' }, dateArray: { type: 'date', repeat: true } }
 
   const tryteBuffer = new TryteBuffer(protocol)
-  const testInput = { date: new Date('2019-03-18T04:39:00.000Z'), dateArray: [new Date('2019-03-18T04:38:00.000Z'), new Date(5000), new Date(2018, 11, 24, 10, 33, 30, 0)] }
+  const testInput = { date: new Date('2019-03-18T04:39:00.000Z'), dateArray: [new Date('2019-03-18T04:38:00.000Z'), new Date(5000), new Date(5000000)] }
 
   let tryteEncoding = tryteBuffer.encode(testInput)
   let decodedTrytes = tryteBuffer.decode(tryteEncoding)
 
-  t.equal('D9F9RH99CD9F9REU999999ECZSKYPL', tryteEncoding, 'the encoded trytes')
+  t.equal('D9F9RH99CD9F9REU999999E9999FWE', tryteEncoding, 'the encoded trytes')
   t.equal(JSON.stringify(testInput), JSON.stringify(decodedTrytes), 'the decoded object is the same as the original input')
 })
 
