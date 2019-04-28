@@ -15,10 +15,10 @@ Find the encoding/decoding module [here](https://github.com/iftt/tryte-encode-de
 ## Install
 ```sh
 # npm
-npm install --save tryte-buffer
+npm install --save @iftt/tryte-buffer
 
 # yarn
-yarn add tryte-buffer
+yarn add @iftt/tryte-buffer
 ```
 
 ## Example
